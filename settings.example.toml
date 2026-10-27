@@ -1,0 +1,20 @@
+# Copy through `collector init`: it generates secret_key and api.token.
+[app]
+shutdown_timeout = "45s"
+[database]
+dsn = "host=localhost user=collector password=collector dbname=dota sslmode=disable"
+max_open_conns = 20
+[security]
+secret_key = "REPLACE_WITH_BASE64_32_BYTES"
+[api]
+listen = "127.0.0.1:8080"
+token = "REPLACE_WITH_RANDOM_TOKEN"
+cors_origins = []
+[gc]
+# Fallback when OpenDota has no cluster/replay_salt; the account comes from `collector login`.
+daily_limit = 100
+request_timeout = "10s"
+welcome_timeout = "60s"
+[downloader]
+workers = 4
+timeout = "10m"

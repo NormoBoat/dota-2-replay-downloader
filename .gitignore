@@ -1,0 +1,11 @@
+settings.toml
+settings.toml.tmp
+settings.toml.bak
+spike-token.txt
+*.maFile
+accounts*.txt
+proxies*.txt
+/collector
+/collector.exe
+/spike.exe
+/.scope-backup/
